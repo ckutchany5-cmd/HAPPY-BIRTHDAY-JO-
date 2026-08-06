@@ -185,6 +185,51 @@ opacity:.45;
 font-size:15px;
 
 }
+/* Apparition progressive */
+
+.fade{
+
+opacity:0;
+
+transform:translateY(25px);
+
+animation:fadeUp 1.2s forwards;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(25px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.delay1{animation-delay:.3s;}
+
+.delay2{animation-delay:1.2s;}
+
+.delay3{animation-delay:2.2s;}
+
+.delay4{animation-delay:3.4s;}
+
+.delay5{animation-delay:4.2s;}
+
+.delay6{animation-delay:5s;}
+
+.delay7{animation-delay:5.8s;}
 
 </style>
 
@@ -218,19 +263,19 @@ document.body.appendChild(star);
 
 <div class="container">
 
-<h2>Il y a des personnes...</h2>
+<h2 class="fade delay1">Il y a des personnes...</h2>
 
-<h2>qui entrent dans notre vie...</h2>
+<h2 class="fade delay2">qui entrent dans notre vie...</h2>
 
-<h2>et qui la changent sans même s'en rendre compte.</h2>
+<h2 class="fade delay3">et qui la changent sans même s'en rendre compte.</h2>
 
-<h1>JOVIAL</h1>
+<h1 class="fade delay4">JOVIAL</h1>
 
-<small>MUNDHU MULUKA</small>
+<small class="fade delay5">MUNDHU MULUKA</small>
 
-<p>Une surprise t'attend.</p>
+<p class="fade delay6">Une surprise t'attend.</p>
 
-<button>✨ Commencer</button>
+<button class="fade delay7">✨ Commencer</button>
 
 </div>
 
