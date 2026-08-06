@@ -162,3 +162,31 @@ button.style.transform="scale(1.12)";
 button.style.boxShadow="0 0 45px #79b7ff";
 
 });
+const lines = document.querySelectorAll(".line");
+const name = document.getElementById("name");
+const subtitle = document.querySelector(".subtitle");
+const button = document.getElementById("startButton");
+
+name.style.opacity = "0";
+subtitle.style.opacity = "0";
+
+setTimeout(()=>{
+    name.style.transition="1.5s";
+    name.style.opacity="1";
+},6000);
+
+setTimeout(()=>{
+    subtitle.style.transition="1.5s";
+    subtitle.style.opacity="1";
+},7500);
+
+setTimeout(()=>{
+    button.style.display="block";
+    button.animate([
+        {opacity:0,transform:"translateY(30px)"},
+        {opacity:1,transform:"translateY(0px)"}
+    ],{
+        duration:1200,
+        fill:"forwards"
+    });
+},9000);
