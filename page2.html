@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pour Jovial</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#020814;
+color:white;
+font-family:"Poppins",sans-serif;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+position:relative;
+}
+
+/* Étoiles */
+
+.star{
+position:absolute;
+width:2px;
+height:2px;
+background:white;
+border-radius:50%;
+animation:twinkle 4s infinite;
+}
+
+@keyframes twinkle{
+0%{opacity:.2;}
+50%{opacity:1;}
+100%{opacity:.2;}
+}
+
+/* Contenu */
+
+.container{
+text-align:center;
+padding:30px;
+max-width:700px;
+animation:fade 2s ease;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+h2{
+font-weight:300;
+font-size:28px;
+margin-bottom:25px;
+}
+
+h1{
+font-family:"Playfair Display",serif;
+font-size:64px;
+margin:40px 0;
+text-shadow:
+0 0 15px #60a5fa,
+0 0 35px #3b82f6;
+}
+
+p{
+font-size:20px;
+line-height:1.8;
+opacity:.9;
+}
+
+button{
+
+margin-top:60px;
+
+padding:16px 42px;
+
+border:none;
+
+border-radius:40px;
+
+background:white;
+
+color:#2563eb;
+
+font-size:18px;
+
+font-weight:600;
+
+cursor:pointer;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<script>
+
+for(let i=0;i<220;i++){
+
+const star=document.createElement("div");
+
+star.className="star";
+
+star.style.left=Math.random()*100+"%";
+
+star.style.top=Math.random()*100+"%";
+
+star.style.animationDelay=Math.random()*4+"s";
+
+document.body.appendChild(star);
+
+}
+
+</script>
+
+<div class="container">
+
+<p>
+
+Le 25 août n'est pas un jour comme les autres...
+
+</p>
+
+<h1>
+
+JOVIAL
+
+</h1>
+
+<p>
+
+Parce qu'il marque le jour où une personne extraordinaire est venue au monde.
+
+</p>
+
+<button onclick="window.location.href='page3.html'">
+
+Continuer →
+
+</button>
+
+</div>
+
+</body>
+
+</html>
