@@ -217,3 +217,18 @@ font-size:13px;
 opacity:.75;
 
 }
+#name{
+
+opacity:0;
+
+transition:1.5s;
+
+}
+
+.subtitle{
+
+opacity:0;
+
+transition:1.5s;
+
+}
