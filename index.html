@@ -8,6 +8,51 @@
 <title>Pour Jovial</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+/* Apparition progressive */
+
+.fade{
+
+opacity:0;
+
+transform:translateY(25px);
+
+animation:fadeUp 1.2s forwards;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(25px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.delay1{animation-delay:.3s;}
+
+.delay2{animation-delay:1.2s;}
+
+.delay3{animation-delay:2.2s;}
+
+.delay4{animation-delay:3.4s;}
+
+.delay5{animation-delay:4.2s;}
+
+.delay6{animation-delay:5s;}
+
+.delay7{animation-delay:5.8s;}
 
 <style>
 
@@ -168,6 +213,26 @@ color:#2563eb;
 
 cursor:pointer;
 
+transition:all .35s ease;
+
+box-shadow:0 0 15px rgba(255,255,255,.35);
+
+}
+
+button:hover{
+
+transform:translateY(-3px) scale(1.05);
+
+box-shadow:
+0 0 20px rgba(255,255,255,.6),
+0 0 40px rgba(59,130,246,.5);
+
+}
+
+button:active{
+
+transform:scale(.97);
+
 }
 
 .footer{
@@ -185,57 +250,100 @@ opacity:.45;
 font-size:15px;
 
 }
-/* Apparition progressive */
+/* Transition vers la suite */
 
-.fade{
-
-opacity:0;
-
-transform:translateY(25px);
-
-animation:fadeUp 1.2s forwards;
-
-}
-
-@keyframes fadeUp{
-
-from{
+body.fade-out{
 
 opacity:0;
 
-transform:translateY(25px);
+transition:opacity 1.2s ease;
 
 }
 
-to{
+/* ========================= */
+/* ÉTOILE FILANTE */
+/* ========================= */
+
+.shooting-star{
+
+position:absolute;
+
+top:-10%;
+
+left:-20%;
+
+width:180px;
+
+height:2px;
+
+background:linear-gradient(to right,white,transparent);
+
+transform:rotate(35deg);
+
+opacity:0;
+
+animation:shootingStar 8s linear infinite;
+
+z-index:2;
+
+}
+
+@keyframes shootingStar{
+
+0%{
+
+transform:translate(-200px,-200px) rotate(35deg);
+
+opacity:0;
+
+}
+
+10%{
 
 opacity:1;
 
-transform:translateY(0);
+}
+
+20%{
+
+transform:translate(120vw,80vh) rotate(35deg);
+
+opacity:0;
+
+}
+
+100%{
+
+opacity:0;
 
 }
 
 }
-
-.delay1{animation-delay:.3s;}
-
-.delay2{animation-delay:1.2s;}
-
-.delay3{animation-delay:2.2s;}
-
-.delay4{animation-delay:3.4s;}
-
-.delay5{animation-delay:4.2s;}
-
-.delay6{animation-delay:5s;}
-
-.delay7{animation-delay:5.8s;}
 
 </style>
 
 </head>
 
 <body>
+    
+// Bouton Commencer
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+const btn=document.getElementById("startButton");
+
+btn.addEventListener("click",()=>{
+
+document.body.classList.add("fade-out");
+setTimeout(()=>{
+
+window.location.href="page2.html";
+
+},1200);
+
+});
+
+});
 
 <script>
 
@@ -261,6 +369,8 @@ document.body.appendChild(star);
 
 </script>
 
+<div class="shooting-star"></div>
+
 <div class="container">
 
 <h2 class="fade delay1">Il y a des personnes...</h2>
@@ -275,7 +385,9 @@ document.body.appendChild(star);
 
 <p class="fade delay6">Une surprise t'attend.</p>
 
-<button class="fade delay7">✨ Commencer</button>
+<button id="startButton" class="fade delay7">
+✨ Commencer
+</button>
 
 </div>
 
