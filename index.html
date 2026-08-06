@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pour Jovial</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,body{
+
+width:100%;
+height:100%;
+overflow:hidden;
+
+}
+
+body{
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:
+radial-gradient(circle at top,#173b85,#050816 55%,#000000);
+
+font-family:"Poppins",sans-serif;
+
+color:white;
+
+position:relative;
+
+}
+
+/* ---------- ÉTOILES ---------- */
+
+.star{
+
+position:absolute;
+
+width:2px;
+
+height:2px;
+
+background:white;
+
+border-radius:50%;
+
+animation:twinkle 3s infinite;
+
+}
+
+@keyframes twinkle{
+
+0%{
+opacity:.2;
+transform:scale(.8);
+}
+
+50%{
+opacity:1;
+transform:scale(1.3);
+}
+
+100%{
+opacity:.2;
+transform:scale(.8);
+}
+
+}
+
+/* ---------- CONTENU ---------- */
+
+.container{
+
+text-align:center;
+
+z-index:10;
+
+padding:20px;
+
+}
+
+h2{
+
+font-weight:300;
+
+font-size:22px;
+
+margin:12px 0;
+
+opacity:.9;
+
+}
+
+h1{
+
+font-family:"Playfair Display",serif;
+
+font-size:72px;
+
+margin-top:40px;
+
+letter-spacing:5px;
+
+text-shadow:
+
+0 0 20px #66b3ff,
+
+0 0 50px #3b82f6;
+
+}
+
+small{
+
+display:block;
+
+margin-top:10px;
+
+font-size:18px;
+
+letter-spacing:5px;
+
+opacity:.8;
+
+}
+
+p{
+
+margin-top:35px;
+
+font-size:20px;
+
+}
+
+button{
+
+margin-top:45px;
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:40px;
+
+font-size:18px;
+
+font-weight:600;
+
+background:white;
+
+color:#2563eb;
+
+cursor:pointer;
+
+}
+
+.footer{
+
+position:absolute;
+
+bottom:30px;
+
+width:100%;
+
+text-align:center;
+
+opacity:.45;
+
+font-size:15px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<script>
+
+for(let i=0;i<250;i++){
+
+const star=document.createElement("div");
+
+star.className="star";
+
+star.style.left=Math.random()*100+"%";
+
+star.style.top=Math.random()*100+"%";
+
+star.style.animationDelay=Math.random()*3+"s";
+
+star.style.width=(Math.random()*3+1)+"px";
+
+star.style.height=star.style.width;
+
+document.body.appendChild(star);
+
+}
+
+</script>
+
+<div class="container">
+
+<h2>Il y a des personnes...</h2>
+
+<h2>qui entrent dans notre vie...</h2>
+
+<h2>et qui la changent sans même s'en rendre compte.</h2>
+
+<h1>JOVIAL</h1>
+
+<small>MUNDHU MULUKA</small>
+
+<p>Une surprise t'attend.</p>
+
+<button>✨ Commencer</button>
+
+</div>
+
+<div class="footer">
+
+Chaque étoile raconte une histoire.
+
+</div>
+
+</body>
+
+</html>
