@@ -1,220 +1,445 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pour Jovial</title>
+
+<title>Pour Jovial ❤️</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-<style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-height:100vh;
-overflow:hidden;
-display:flex;
-justify-content:center;
-align-items:center;
-background:
-radial-gradient(circle at top,#153677,#090b1d 45%,#02040a 100%);
-font-family:Poppins,sans-serif;
-color:white;
-position:relative;
-}
-
-.star{
-position:absolute;
-background:white;
-border-radius:50%;
-animation:twinkle 3s infinite;
-}
-
-@keyframes twinkle{
-
-0%{opacity:.2;transform:scale(.8);}
-50%{opacity:1;transform:scale(1.3);}
-100%{opacity:.2;transform:scale(.8);}
-
-}
-
-.container{
-
-text-align:center;
-z-index:5;
-padding:30px;
-
-animation:fade 2s ease;
-
-}
-
-@keyframes fade{
-
-from{
-opacity:0;
-transform:translateY(25px);
-}
-
-to{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
-}
-
-h2{
-
-font-weight:300;
-margin-bottom:12px;
-font-size:22px;
-opacity:.9;
-
-}
-
-h1{
-
-font-family:"Playfair Display",serif;
-font-size:65px;
-letter-spacing:4px;
-margin:30px 0 10px;
-
-text-shadow:
-0 0 20px #4f9dff,
-0 0 45px #4f9dff;
-
-}
-
-small{
-
-font-size:18px;
-letter-spacing:3px;
-opacity:.8;
-
-}
-
-p{
-
-margin-top:30px;
-font-size:20px;
-opacity:.85;
-
-}
-
-button{
-
-margin-top:45px;
-
-padding:18px 45px;
-
-font-size:18px;
-
-border:none;
-
-border-radius:40px;
-
-cursor:pointer;
-
-background:white;
-
-color:#123c86;
-
-font-weight:bold;
-
-transition:.4s;
-
-box-shadow:0 0 25px rgba(255,255,255,.5);
-
-}
-
-button:hover{
-
-transform:scale(1.08);
-
-box-shadow:0 0 40px #66b3ff;
-
-}
-
-.footer{
-
-position:absolute;
-
-bottom:25px;
-
-width:100%;
-
-text-align:center;
-
-opacity:.45;
-
-font-size:15px;
-
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<script>
+<div id="stars"></div>
 
-for(let i=0;i<220;i++){
+<div class="nebula"></div>
 
-let s=document.createElement("div");
+<section id="home" class="page">
 
-s.className="star";
+<div class="content">
 
-let size=Math.random()*3+1;
+<p class="intro line1">
 
-s.style.width=size+"px";
+Il y a des personnes...
 
-s.style.height=size+"px";
+</p>
 
-s.style.left=Math.random()*100+"%";
+<p class="intro line2">
 
-s.style.top=Math.random()*100+"%";
+qui entrent dans notre vie...
 
-s.style.animationDelay=Math.random()*4+"s";
+</p>
 
-document.body.appendChild(s);
+<p class="intro line3">
 
-}
+et qui la changent
+sans même s'en rendre compte.
 
-</script>
+</p>
 
-<div class="container">
+<h1 id="mainTitle">
 
-<h2>Il y a des personnes...</h2>
+JOVIAL
 
-<h2>qui entrent dans notre vie...</h2>
+</h1>
 
-<h2>et qui la changent sans même s'en rendre compte.</h2>
+<h2>
 
-<h1>JOVIAL</h1>
+MUNDHU MULUKA
 
-<small>MUNDHU MULUKA</small>
+</h2>
 
+<p class="subtitle">
 
-<p>Fait par Consolate Kutchany Kanku❤️.</p>
+Une surprise t'attend...
 
-<button>✨ Commencer</button>
+</p>
 
-</div>
+<button id="startButton">
 
-<div class="footer">
+✨ Commencer
+
+</button>
+
+<div class="signature">
+
+<p>
 
 Chaque étoile raconte une histoire.
 
+</p>
+
+<p>
+
+Créé avec tout mon cœur pour toi.
+
+</p>
+
+<p>
+
+Made with ❤️ by
+
+<br>
+
+<strong>
+
+Consolate Kutchany Kanku
+
+</strong>
+
+</p>
+
+<p>
+
+(mama lova ❤️)
+
+</p>
+
 </div>
 
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<!-- PAGE MUSIQUE -->
+
+<!-- ========================= -->
+
+<section id="musicPage" class="page hidden">
+
+<div class="musicCard">
+
+<div class="musicIcon">
+
+🎵
+
+</div>
+
+<h1>
+
+Avant d'aller plus loin...
+
+</h1>
+
+<p class="musicText">
+
+Certaines chansons ont cette étrange capacité
+
+de dire tout ce que notre cœur
+
+n'arrive pas toujours à expliquer.
+
+<br><br>
+
+Si tu acceptes de vivre cette surprise
+
+comme je l'ai imaginée...
+
+<br><br>
+
+Commence par cette chanson.
+
+<br><br>
+
+Puis reviens ici.
+
+La suite t'attendra.
+
+❤️
+
+</p>
+
+<a
+
+class="musicButton"
+
+target="_blank"
+
+href="https://music.apple.com/cd/album/always/1681332007?i=1681332015">
+
+ Music
+
+<br>
+
+<span>
+
+Always — Daniel Caesar
+
+</span>
+
+</a>
+
+<button id="continueButton">
+
+J'ai écouté la chanson ❤️
+
+</button>
+
+</div>
+
+</section>
+<!-- ========================= -->
+<!-- PAGE SOUVENIRS -->
+<!-- ========================= -->
+
+<section id="storyPage" class="page hidden">
+
+    <div class="storyContent">
+
+        <p class="chapterLabel">
+            CHAPITRE III
+        </p>
+
+        <h1>
+            Et maintenant...
+        </h1>
+
+        <div class="smallDivider"></div>
+
+        <p class="storyText">
+            Si tu es arrivé jusqu'ici,
+            c'est que tu as accepté de me suivre
+            dans cette petite surprise.
+        </p>
+
+        <p class="storyText">
+            Alors laisse-moi te montrer,
+            à ma manière,
+            à quel point tu comptes.
+        </p>
+
+        <p class="storyText specialText">
+            Parce qu'aujourd'hui,
+            tout ceci est pour toi. ❤️
+        </p>
+
+        <button id="storyButton">
+            Découvrir les souvenirs ✨
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- GALERIE -->
+<!-- ========================= -->
+
+<section id="galleryPage" class="page hidden">
+
+    <div class="galleryContent">
+
+        <p class="chapterLabel">
+            CHAPITRE IV
+        </p>
+
+        <h1>
+            Quelques souvenirs...
+        </h1>
+
+        <p class="galleryIntro">
+            Des instants.
+            Des sourires.
+            Des souvenirs.
+            <br>
+            Et surtout, une personne que je n'oublierai jamais.
+        </p>
+
+        <div class="gallery">
+
+            <!--
+            PLUS TARD, TES 20 PHOTOS IRONT ICI.
+
+            Exemple :
+
+            <div class="photoCard">
+                <img src="images/photo1.jpg" alt="Souvenir 1">
+                <p>Un souvenir que je garde précieusement. ❤️</p>
+            </div>
+            -->
+
+            <div class="photoPlaceholder">
+                📸
+                <span>
+                    Nos souvenirs arrivent bientôt...
+                </span>
+            </div>
+
+        </div>
+
+        <button id="galleryButton">
+            Continuer ❤️
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- LETTRE -->
+<!-- ========================= -->
+
+<section id="letterPage" class="page hidden">
+
+    <div class="letterContainer">
+
+        <p class="chapterLabel">
+            CHAPITRE V
+        </p>
+
+        <h1>
+            Pour toi, Jovial.
+        </h1>
+
+        <div class="letterPaper">
+
+            <p class="letterOpening">
+                Cher Jovial,
+            </p>
+
+            <p>
+                Si j'ai créé tout ceci, ce n'est pas simplement
+                pour te souhaiter un joyeux anniversaire.
+            </p>
+
+            <p>
+                Je voulais créer quelque chose qui puisse te rappeler
+                une chose importante :
+            </p>
+
+            <p class="importantLine">
+                tu comptes énormément pour moi.
+            </p>
+
+            <p>
+                Peut-être que tu le sais déjà.
+                Peut-être que parfois tu en doutes.
+            </p>
+
+            <p>
+                Mais j'espère qu'après avoir parcouru cette petite
+                surprise, tu comprendras un peu mieux la place
+                particulière que tu occupes dans ma vie.
+            </p>
+
+            <!--
+            COPINE :
+            ON REMPLACERA CETTE PARTIE PAR TA VRAIE LETTRE.
+            Tu pourras écrire exactement ce que tu veux ici.
+            -->
+
+            <p class="letterEnding">
+                Et maintenant...
+                il ne reste plus qu'une dernière chose à te dire.
+            </p>
+
+        </div>
+
+        <button id="letterButton">
+            Une dernière chose... ✨
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- FINAL ANNIVERSAIRE -->
+<!-- ========================= -->
+
+<section id="birthdayPage" class="page hidden">
+
+    <div id="confettiContainer"></div>
+
+    <div class="birthdayContent">
+
+        <p class="finalSmall">
+            25 AOÛT
+        </p>
+
+        <div class="age">
+            21
+        </div>
+
+        <p class="years">
+            ANS
+        </p>
+
+        <h1 class="happyBirthday">
+            Joyeux anniversaire
+        </h1>
+
+        <h2 class="finalName">
+            JOVIAL MUNDHU MULUKA
+        </h2>
+
+        <div class="heart">
+            ❤️
+        </div>
+
+        <p class="finalMessage">
+            Je te souhaite une nouvelle année remplie
+            de bonheur, de réussite, de paix,
+            de belles surprises et de souvenirs
+            que tu garderas longtemps.
+        </p>
+
+        <p class="neverDoubt">
+            Et surtout...
+            <br><br>
+            ne doute jamais de la place
+            que tu occupes dans mon cœur.
+        </p>
+
+        <div class="finalSignature">
+
+            Avec tout mon cœur,
+
+            <br><br>
+
+            <strong>
+                Consolate Kutchany Kanku
+            </strong>
+
+            <br>
+
+            <span>
+                mama lova ❤️
+            </span>
+
+        </div>
+
+        <button id="restartButton">
+            ✨ Revoir depuis le début
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- JAVASCRIPT -->
+<!-- ========================= -->
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
